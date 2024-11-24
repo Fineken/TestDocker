@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: ./app
+    environment:
+      - username=${username} # Передача переменной окружения из системы
+    command: ["python3", "script.py"]
